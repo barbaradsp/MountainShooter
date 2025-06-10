@@ -4,6 +4,7 @@ from code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH, PLAYER_KEY_DOWN, PLA
     PLAYER_KEY_RIGHT
 from code.Entity import Entity
 
+
 class Player(Entity):
     def __init__(self, name, position):
         super().__init__(name, position)
