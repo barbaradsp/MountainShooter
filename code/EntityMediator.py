@@ -47,16 +47,16 @@ class EntityMediator():
                     ent1.rect.top <= ent2.rect.bottom):
                 ent1.health -= ent2.damage
                 ent2.health -= ent1.damage
-                ent1.last_dmg = ent2.name
-                ent2.last_dmg = ent1.name
+                ent1.last_damage = ent2.name
+                ent2.last_damage = ent1.name
 
     @staticmethod
     def __give_score(enemy: Enemy, entity_list: list[Entity]):
-        if enemy.last_dmg == 'Player1Shot':
+        if enemy.last_damage == 'Player1Shot':
             for ent in entity_list:
                 if ent.name == 'Player1':
                     ent.score += enemy.score
-        elif enemy.last_dmg == 'Player2Shot':
+        elif enemy.last_damage == 'Player2Shot':
             for ent in entity_list:
                 if ent.name == 'Player2':
                     ent.score += enemy.score
